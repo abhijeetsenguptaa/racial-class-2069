@@ -8,6 +8,8 @@ var socket = io('http://localhost:5000',
     }
 )
 
+
+// connecting from server
 socket.on('connect', function(){
     user = null;
     board = []
@@ -15,6 +17,7 @@ socket.on('connect', function(){
     console.log('connected to server')
 })
 
+// Checking if the Room is full
 socket.on('full', () =>{
     document.getElementById('message').innerHTML = 'Server is full'
 })
@@ -24,6 +27,8 @@ socket.on('setUser', function(data){
     console.log(user)
 })
 
+
+// setting user name and their unique symbol
 socket.on('start', (data) =>{
     users = data.users;
     turn = data.turn;
@@ -32,6 +37,7 @@ socket.on('start', (data) =>{
 
     document.getElementById('message').innerHTML = `You are ${user.name} and your symbol is ${user.symbol}`
 })
+
 
 socket.on('move', (data) =>{
     board = data.board;
