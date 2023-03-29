@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 4px;
+}
+
+#mainContainer{
+    border: 2px solid black;
+    height: 94vh;
+    display: flex;
+}
+
+#left{
+    border: 2px solid black;
+    width: 36%;
+    height: 98%;
+}
+#right{
+    border: 2px solid black;
+    width: 64%;
+    height: 98%;
+}
+
+#displayMessage{
+    border: 1px solid black;
+    height: 84vh;
+}
+
+#inputField{
+    border: 1px solid black;
+}
+
+#messageInput{
+    width: 88%;
+}
+
+#sendBtn{
+    width: 8%;
+}

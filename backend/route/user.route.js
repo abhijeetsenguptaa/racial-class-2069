@@ -62,11 +62,72 @@ userRoute.post('/login',async(req,res)=>{
 
 
 // For verification of the email-id provided this route is been made.....
-userRoute.post('/send',async(req,res)=>{
-    try{
-        const {email} = req.body;
+userRoute.post('/generate', async (req, res) => {
+    try {
+        const { email } = req.body;
+        sgMail.setApiKey(process.env.api_key);
+
+        function generateOTP() {
+            const digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+            let generatedOtp = "";
+
+            for (let i = 0; i < 4; i++) {
+                const index = Math.floor(Math.random() * digits.length);
+
+                generatedOtp += digits[index];
+            }
+            return generatedOtp;
+        }
+
+        const otp = generateOTP();
+        
+
+        const msg = {
+            to: email,
+            from: "abhi.bunnny@gmail.com",
+            subject: 'One Time Password',
+            text: `Otp is ${otp}`,
+        }
+
+        sgMail
+            .send(msg)
+            .then(() => { }, error => {
+                console.error(error);
+
+                if (error.response) {
+                    console.error(error.response.body)
+                }
+            });
+
+        res.send(otp);
     }catch(err){
         res.send(err);
     }
 })
+
+//This is route made for updating any existing user.
+userRoute.patch('/update/:id',authentication,authorize(["Admin"]),async(req,res)=>{
+    try{
+        let id = req.params.id;
+        let data = req.body;
+        let newData = await UserModel.findByIdAndUpdate({_id:id},data);
+        res.send(newData);
+    }catch(err){
+        res.send(err)
+    }
+})
+
+
+// This is the route made to delete any existing user.
+userRoute.delete('/remove/:id',authentication,authorize(["Admin"]),async(req,res)=>{
+    try{
+        let id = req.params.id;
+        let newData = await UserModel.findByIdAndDelete({_id:id});
+        res.send(newData);
+    }catch(err){
+        res.send(err)
+    }
+})
+
 module.exports = {userRoute};
