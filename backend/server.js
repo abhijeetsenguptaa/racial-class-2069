@@ -1,10 +1,12 @@
 const express = require('express');
+const app = express();
+// const server = require('http').createServer(app);
+// const io = require('socket.io')(server);
 const { connection } = require('./configs/connection');
 const { userRoute } = require('./route/user.route');
 require('dotenv').config();
 
 
-const app = express();
 app.use(express.json());
 
 //************************************************/
@@ -83,7 +85,10 @@ app.get('/',(req,res)=>{
 // All the routes are going to be attached here..
 app.use('/users',userRoute);
 
-
+// Socket-IO work starts here ----------------------------------------------
+// io.on('connection',(socket)=>{
+//     socket.emit('message','Welcome to the Game')
+// })
 
 
 app.listen(process.env.port,async(req,res)=>{
