@@ -82,12 +82,12 @@
        <form  id="form_page">
            <div>
                <label for="">Email</label>
-               <input type="text" id="login_email" name="login_email">
+               <input type="text" name="login_email" id="login_email">
                <hr class="login-line">
            </div> 
            <div>
                <label for="">Password</label>
-               <input type="password"  id="login_password" name="login_password">
+               <input type="password"  name="login_password" id="login_password">
                <hr class="login-line">
            </div>
            <button style="background-color: #ff7757;" id="loginBtn">Login</button>
@@ -104,4 +104,103 @@
    
 </body>
 </html>
-<script src="./jsfile/signup.js"></script>
+<!-- <script src="./jsfile/signup.js"></script> -->
+<script>
+  const registrationBtn = document.getElementById('registrationBtn');
+const loginBtn = document.getElementById('loginBtn');
+const url = "http://localhost:8080/"
+
+registrationBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    registration()
+})
+
+
+
+loginBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    login();
+})
+
+
+
+
+
+
+
+
+
+
+// Registration work has been done here........................
+function registration(){
+    let user_name = document.getElementById('user_name').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+
+
+    let obj = {
+        name :user_name,
+        email : email,
+        password : password
+    }
+
+    fetch(`${url}users/register`,{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body:JSON.stringify(obj)
+    })
+     .then((res)=>{
+        return res.json()
+     })
+     .then((data)=>{
+        alert(data.msg)
+     })
+     .catch((err)=>{
+        console.log(err);
+     })
+
+}
+
+
+
+
+//Login Function starts here..................
+function login(){
+    const login_email = document.getElementById('login_email').value;
+    const login_password = document.getElementById('login_password').value;
+
+    let obj = {
+        email : login_email,
+        password : login_password
+    }
+
+
+    fetch(`${url}users/login`,{
+        method : "POST",
+        headers : {
+            "Content-type" : "application/json"
+        },
+        body : JSON.stringify(obj)
+    })
+     .then((res)=>{
+        return res.json();
+     })
+     .then((data)=>{
+        if(data.msg == "Login Successful"){
+            localStorage.setItem('token',JSON.stringify(data.token));
+            if(data.role=="Player"){
+              window.location.href = "./home.html"
+            }else{
+              window.location.href = "./adminPanel.html"
+            }
+        }else{
+            alert(data.msg);
+        }
+     })
+     .catch((err)=>{
+        console.log(err);
+     })
+}
+</script>

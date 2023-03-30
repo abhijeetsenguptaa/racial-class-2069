@@ -60,13 +60,14 @@ function registration(){
 
 //Login Function starts here..................
 function login(){
-    const login_email = document.getElementById('email_login').value;
+    const login_email = document.getElementById('login_email').value;
     const login_password = document.getElementById('login_password').value;
 
     let obj = {
         email : login_email,
         password : login_password
     }
+
 
     fetch(`${url}users/login`,{
         method : "POST",
@@ -79,7 +80,16 @@ function login(){
         return res.json();
      })
      .then((data)=>{
-        console.log(data);
+        if(data.msg == "Login Successful"){
+            localStorage.setItem('token',JSON.stringify(data.token));
+            if(data.role == "Player"){
+                window.location.href = "../home.html"
+            }else{
+                window.location.href = "../adminPanel.html"
+            }
+        }else{
+            alert(data.msg);
+        }
      })
      .catch((err)=>{
         console.log(err);
