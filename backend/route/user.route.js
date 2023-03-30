@@ -29,7 +29,7 @@ userRoute.post('/register',uniqueMail,async(req,res)=>{
         bcrypt.hash(password,5,async(err,hash)=>{
             let newUser = new UserModel({name,email,password:hash,role,registered_on});
             let data = await newUser.save();
-            res.send(data);
+            res.send({'msg':'Email-id registered Successfully'});
         })
     }catch(err){
         res.send(err);

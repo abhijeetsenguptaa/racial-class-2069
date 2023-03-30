@@ -7,7 +7,7 @@ const uniqueMail = async(req,res,next) => {
         const {email} = req.body;
         let data = await UserModel.find({email});
         if(data.length>=1){
-            res.send('Email-id already registered');
+            res.send({'msg':'Email-id already registered'});
         }else{
             next();
         }
