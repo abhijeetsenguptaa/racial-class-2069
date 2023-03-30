@@ -46,13 +46,13 @@ userRoute.post('/login',async(req,res)=>{
             bcrypt.compare(password,findData[0].password,async(err,result)=>{
                 if(result){
                     const token = jwt.sign({user_email:findData[0].email},process.env.secret_key,{expiresIn:'7d'});
-                    res.send({'msg':'Login Successful','token':token});
+                    res.send({'msg':'Login Successful','token':token,'role':findData[0].role});
                 }else{
-                    res.send('Wrong Credentials')
+                    res.send({'msg':'Wrong Credentials'})
                 }
             })
         }else{
-            res.send('User not found!')
+            res.send({'msg':'User not found!'})
         }
     }catch(err){
         res.send(err);
@@ -123,8 +123,8 @@ userRoute.patch('/update/:id',authentication,authorize(["Admin"]),async(req,res)
 userRoute.delete('/remove/:id',authentication,authorize(["Admin"]),async(req,res)=>{
     try{
         let id = req.params.id;
-        let newData = await UserModel.findByIdAndDelete({_id:id});
-        res.send(newData);
+        await UserModel.findByIdAndDelete({_id:id});
+        res.send(await UserModel.find({role:"Player"}));
     }catch(err){
         res.send(err)
     }
