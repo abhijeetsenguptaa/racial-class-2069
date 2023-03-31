@@ -27,6 +27,7 @@ function renderCards(data) {
       "src",
       "https://th.bing.com/th/id/OIP.ghnm15vRm0mVIoQoEm1VOAAAAA?w=196&h=196&c=7&r=0&o=5&dpr=1.5&pid=1.7"
     );
+    avatar.setAttribute('class','avatar')
     let name = document.createElement("h3");
     name.innerText = "Name : " + element.name;
     let email = document.createElement("h3");
@@ -34,6 +35,7 @@ function renderCards(data) {
     let registerDate = document.createElement("h3");
     registerDate.innerText = "Registered-On : " + element.registered_on;
     let profileDelete = document.createElement("button");
+    profileDelete.setAttribute('class','profileDelete')
     profileDelete.innerText = "DELETE";
 
     profileDelete.addEventListener("click", () => {
@@ -54,3 +56,21 @@ function renderCards(data) {
     mainContent.append(box);
   });
 }
+
+
+
+
+
+// Logout button logic has been written here..................
+
+let logOutBtn = document.getElementById('logOutBtn');
+
+
+logOutBtn.addEventListener('click',()=>{
+  localStorage.setItem('token',null);
+  window.location.href = "./signup.html"
+})
+
+
+
+

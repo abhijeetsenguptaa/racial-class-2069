@@ -46,7 +46,7 @@ userRoute.post('/login',async(req,res)=>{
             bcrypt.compare(password,findData[0].password,async(err,result)=>{
                 if(result){
                     const token = jwt.sign({user_email:findData[0].email},process.env.secret_key,{expiresIn:'7d'});
-                    res.send({'msg':'Login Successful','token':token,'role':findData[0].role});
+                    res.send({'msg':'Login Successful','token':token,'role':findData[0].role,"email":findData[0].email});
                 }else{
                     res.send({'msg':'Wrong Credentials'})
                 }
