@@ -4,7 +4,7 @@ let turn = ''
 let board = []
 
 //Connecting from Server
-var socket = io('http://localhost:5000',
+var socket = io('http://localhost:8080',
     {
         transports: ['websocket'],
     }
