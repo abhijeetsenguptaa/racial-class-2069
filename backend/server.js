@@ -28,6 +28,24 @@ io.on("connection", (socket) => {
     console.log('socket connected')
 
 
+    //Abhijeet is working from here--------------------------------------------- 
+    socket.emit('joinedGame',userJoin("Live X's And O's","Welcome to the Game"))
+
+
+
+    function userJoin(bot,message){
+        return {
+            bot,
+            message
+        }
+    }
+
+
+    socket.on("message",(msg)=>{
+        io.emit("output",userJoin("Abhijeet",msg))
+    })
+    //Abhijeet is working from here--------------------------------------------
+
     if (users.length === 2) {
         socket.emit('full');
         return;

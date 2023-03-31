@@ -11,17 +11,18 @@
 
 #left{
     border: 2px solid black;
-    width: 36%;
+    width: 40%;
     height: 98%;
 }
 #right{
     border: 2px solid black;
-    width: 64%;
+    width: 60%;
     height: 98%;
 }
 
 #displayMessage{
     border: 1px solid black;
+    overflow-y: auto;
     height: 84vh;
 }
 
@@ -35,4 +36,20 @@
 
 #sendBtn{
     width: 8%;
+}
+
+.identity{
+    display: flex;
+    justify-content: space-between;
+}
+
+.messageBox{
+    border: 1px solid black;
+    margin: 2%;
+    padding: 0% 2%;
+    border-radius: 10px 10px;
+}
+
+.mainMessage{
+    margin-top: -2%;
 }

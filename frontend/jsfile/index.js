@@ -1,3 +1,27 @@
+let userDetails = new URLSearchParams(window.location.search);
+
+const email = JSON.parse(localStorage.getItem('email'));
+const room = userDetails.get("room");
+
+console.log(email,room)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let user = null;
 let users = []
 let turn = ''
