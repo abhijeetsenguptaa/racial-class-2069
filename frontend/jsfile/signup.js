@@ -124,5 +124,6 @@ function signIn(){
  
 
   document.body.appendChild(form);
+  
   form.submit();
 }
