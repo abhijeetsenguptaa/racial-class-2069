@@ -9,25 +9,46 @@
 </head>
 <body>
     <div id="mainContainer">
-        <div id="left"></div>
+        <div id="left">
+            <div class="game-container">
+                <div class="user-board">
+                    <div class="user-container">
+                        <div class="player-detail">
+                            <div class="player-1">
+                               <div class="name">Player 1 : &nbsp; <span>John</span></div>
+                                <div class="symbol">Symbol : &nbsp; <span>X</span></div>
+                            </div>
+                            <div class="player-2">
+                                <div class="name">Player 2 : &nbsp; <span>John</span></div>
+                                <div class="symbol">Symbol : &nbsp; <span>O</span></div>
+                            </div>
+                        </div>
+                        <div class="logout-section">
+                            <h4>Reset</h4><br>
+                            <h4>Logout</h4>
+                        </div>
+                    </div> 
+                    <div class="message">
+                        <h1 class=" text-sm text-white font-bold" id="message">Tic tac toe</h1>
+                    </div>
+                </div>
+                <div class="game-board">
+                    <div class="bg-gray-900 text-center grid place-content-center" id="block">
+                        <h1 class="text-3xl text-white font-bold">Tic tac toe</h1>
+    
+    
+                        <!-- Game board container  -->
+                        <div class="gridbox" id="board">
+                            <!-- Appending game board from client side  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="right">
             <div id="messagePortal">
                 <div id="displayMessage">
-                    <!-- Append the data from the JS -->
-                    <!-- <div class="messageBox">
-                        <div class="identity">
-                            <h4>Abhi</h4>
-                            <h4>Time</h4>
-                        </div>
-                        <div class="mainMessage">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisici
-                                ng elit. Nam pariatur reiciendis consequuntur ma
-                                gnam minus, dolorum distinctio nihil sint odit, 
-                                magni, quia fugiat dolor. Consectetur, ea enim 
-                                debitis placeat exercitationem velit.
-                            </p>
-                        </div>
-                    </div> -->
+                    
                 </div>
                 <div id="inputField">
                     <input type="text" name="" id="messageInput">
@@ -37,6 +58,11 @@
         </div>
     </div>
 </body>
+
+
+<!-- Connecting to Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
 <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
 <script src="./main.js"></script>
 </html>
