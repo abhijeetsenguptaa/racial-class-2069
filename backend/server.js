@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const moment = require('moment')
 // const server = require('http').createServer(app);
 // const io = require('socket.io')(server);
 const { connection } = require('./configs/connection');
@@ -36,14 +37,18 @@ io.on("connection", (socket) => {
     function userJoin(bot,message){
         return {
             bot,
+            time : moment().format('h:mm a'),
             message
         }
     }
 
-
-    socket.on("message",(msg)=>{
-        io.emit("output",userJoin("Abhijeet",msg))
+    socket.on("userDetailsX",(data)=>{
+        socket.on("message",(mesg)=>{
+            io.emit("output",userJoin(`${data.name}`,mesg.message))
+        })
     })
+
+    
     //Abhijeet is working from here--------------------------------------------
 
     if (users.length === 2) {
@@ -128,7 +133,7 @@ io.on("connection", (socket) => {
         }
     });
 
-    console.log(user) // For checking
+    // console.log(user) // For checking
 
     // Socket Disconnection
     socket.on('disconnect', () => {
