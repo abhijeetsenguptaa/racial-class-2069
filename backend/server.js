@@ -137,7 +137,7 @@ app.use('/users', userRoute);
 // })
 
 
-app.listen(process.env.port, async (req, res) => {
+server.listen(process.env.port, async (req, res) => {
     try {
         await connection;
         console.log('Server is connected to the Database.');
