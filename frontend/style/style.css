@@ -2,6 +2,9 @@
     margin: 0;
     padding: 4px;
 }
+body{
+    background-color: #111827;
+}
 
 #mainContainer{
     border: 2px solid black;
@@ -13,6 +16,8 @@
     border: 2px solid black;
     width: 40%;
     height: 100%;
+    background-color: #111827;
+    color: white;
 }
 
 
@@ -61,12 +66,12 @@
 .message{
     width: 100%;
     height: 70px;
-    border: 3px solid brown;
+    /* border: 3px solid brown; */
 } 
 
 
  #message{
-    color: black;
+    color: white;
     font-family: sans-serif;
     margin-top: 20px;
     font-size: 18px;
@@ -74,9 +79,9 @@
 } 
 
  .game-board {
-    width: 100%;
+    width: 99%;
     height: 340px;
-    border: 2px solid blue;
+    /* border: 1px solid blue; */
 }
 
 #block {
@@ -95,8 +100,8 @@
 }
 
 #board{
-    width: 260px;
-    height: 260px;
+    width: 100%;
+    height: 100%;
     gap: 5px;
 }  
 
@@ -104,19 +109,23 @@
 
 
 #right{
-    border: 2px solid black;
+    /* border: 4px solid black; */
     width: 60%;
-    height: 98%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/free-vector/dialogue-chat-clouds-speech-bubble-icon-from-lines-triangles-particle-style-design-low-poly-technology-devices-people-communication-concept-blue-background_587448-471.jpg?size=626&ext=jpg&uid=R98136452&ga=GA1.1.460052318.1679565869&semt=ais');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #displayMessage{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     overflow-y: auto;
-    height: 84vh;
+    height: 87.8vh;
 }
 
 #inputField{
-    border: 1px solid black;
+    border: 1px solid black;    
 }
 
 #messageInput{
@@ -124,7 +133,9 @@
 }
 
 #sendBtn{
-    width: 8%;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 11%;
 }
 
 .identity{
@@ -133,7 +144,8 @@
 }
 
 .messageBox{
-    border: 1px solid black;
+    border: 1px solid rgb(245, 241, 241);
+    color: white;
     margin: 2%;
     padding: 0% 2%;
     border-radius: 10px 10px;
