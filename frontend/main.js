@@ -1,25 +1,33 @@
 const socket = io("http://localhost:8080", { transports: ["websocket"] });
+let userDetails = new URLSearchParams(window.location.search);
+
+const name = userDetails.get("username")
+const room = userDetails.get("room");
+
+
+
 let messageInput = document.getElementById('messageInput');
 let sendBtn = document.getElementById('sendBtn');
 
 
 
+socket.emit("userDetailsX",userDetail(name,room));
+
 socket.on("output", (msg) => {
-  showIncomingMessage(msg.bot,msg.message);
+  showIncomingMessage(`${msg.bot}`,`${msg.message}`,`${msg.time}`)
 });
 
 socket.on("joinedGame", (data) => {
-  showIncomingMessage(data.bot,data.message)
-  console.log(data)
+  showIncomingMessage(data.bot,`${name}! ${data.message}`,data.time)
 });
 
 sendBtn.addEventListener("click",()=>{
-    socket.emit("message",messageInput.value)
+  socket.emit("message",messageFormat(name,message))
 })
 
 
 
-function showIncomingMessage(name, message) {
+function showIncomingMessage(name, message,timeX) {
   let displayMessage = document.getElementById("displayMessage");
   let messageBox = document.createElement("div");
   messageBox.setAttribute('class',"messageBox");
@@ -28,7 +36,7 @@ function showIncomingMessage(name, message) {
   let user_name = document.createElement("h4");
   user_name.innerText = name;
   let time = document.createElement("h4");
-  time.innerText = "Time";
+  time.innerText = timeX;
   identity.append(user_name,time);
   let mainMessage = document.createElement("div");
   mainMessage.setAttribute('class',"mainMessage");
@@ -41,4 +49,16 @@ function showIncomingMessage(name, message) {
 
 
 
+function userDetail(name,room){
+  return {
+    name,room
+  }
+}
 
+
+function messageFormat(name,message){
+  return {
+    name,
+    message:messageInput.value
+  }
+}
