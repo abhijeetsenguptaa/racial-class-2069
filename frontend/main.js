@@ -3,6 +3,8 @@ let messageInput = document.getElementById('messageInput');
 let sendBtn = document.getElementById('sendBtn');
 
 
+
+
 socket.on("output", (msg) => {
   showIncomingMessage(msg.bot,msg.message);
 });
