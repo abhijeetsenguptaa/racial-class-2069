@@ -61,3 +61,13 @@ function messageFormat(name,message){
     message:messageInput.value
   }
 }
+
+
+
+let logOutBtn = document.getElementById('logOutBtn');
+
+logOutBtn.addEventListener('click',()=>{
+  alert(`${name} successfully logged out!`)
+  localStorage.setItem('token',null);
+  window.location = "./signup.html"
+})
