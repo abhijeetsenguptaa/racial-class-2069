@@ -191,7 +191,7 @@ function login(){
      .then((data)=>{
         if(data.msg == "Login Successful"){
             localStorage.setItem('token',JSON.stringify(data.token));
-            localStorage.setItem('email',JSON.stringify(data.email));
+            localStorage.setItem('name',JSON.stringify(data.name));
             if(data.role=="Player"){
               window.location.href = "./home.html"
             }else{

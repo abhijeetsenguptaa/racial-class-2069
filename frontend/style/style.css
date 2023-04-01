@@ -20,7 +20,17 @@ body{
     color: white;
 }
 
+#logOutBtn{
+    border: 2px solid rgb(250, 246, 246);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    /* width: 11%; */
+}
 
+/* #logOutBtn:hover{
+
+} */
 
 .game-container {
     width: 100%;
@@ -39,7 +49,7 @@ body{
     width: 100%;
     height: 70%;
     display: flex;
-    border: 3px solid green;
+    /* border: 3px solid green; */
 }
 
 
@@ -59,7 +69,7 @@ body{
     width: 25%;
     height: 100%;
     text-align: center;
-    /* border: 5px solid blue; */
+    border: 5px solid blue;
 }
 
 
@@ -133,8 +143,9 @@ body{
 }
 
 #sendBtn{
-    border: 2px solid black;
+    border: 2px solid rgb(250, 246, 246);
     border-radius: 10px;
+    color: white;
     width: 11%;
 }
 

@@ -24,6 +24,7 @@
         <div>
           <form action="./gameboard.html">
             <h1>Enter your Code</h1>
+            <input type="text" name="username" id="username">
             <input type="number" name="room" id="room" />
             <button id="joinRoom">Join Room</button>
           </form>
@@ -58,7 +59,7 @@
     let joinRoom = document.getElementById("joinRoom");
 
     joinRoom.addEventListener("click", () => {
-      window.location = "./gamePage.html";
+      window.location = "./gameboard.html";
     });
   </script>
 </html>
