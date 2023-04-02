@@ -69,5 +69,5 @@ let logOutBtn = document.getElementById('logOutBtn');
 logOutBtn.addEventListener('click',()=>{
   alert(`${name} successfully logged out!`)
   localStorage.setItem('token',null);
-  window.location = "./signup.html"
+  window.location = "./index.html"
 })
