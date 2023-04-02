@@ -81,6 +81,7 @@ To run backend, run the following command
 ## Authors
 
 - [@abhijeetsenguptaa](https://www.github.com/abhijeetsenguptaa)
+- [@Anandkr21](https://www.github.com/Anandkr21)
 
 
 ## Feedback
