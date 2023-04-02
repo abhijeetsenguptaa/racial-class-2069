@@ -7,3 +7,7 @@ This application allows players to compete against each other on a single device
 
 The application features a simple and intuitive user interface with attractive graphics and sound effects. It is easy to use, and players can quickly learn how to play the game. Overall, your tic-tac-toe application provides a fun and engaging way for players to enjoy the classic game of tic-tac-toe on their device.
 
+Instructions:-
+To make this real time game application we have to download npm packages and node modules
+
+
