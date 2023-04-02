@@ -59,7 +59,7 @@ To run backend, run the following command
 ## Screenshots
 
 Signup Page:-
-<img src="https://nxm201workspace.slack.com/files/U04R4LXPP0W/F0523EE43RN/screenshot__431_.png" alt="S>
+<img src="C:\Users\rhythm\Downloads\Screenshot (431).png" alt="S>
 
 Home Page:-
 ![App Screenshot](https://nxm201workspace.slack.com/files/U04R4LXPP0W/F0523EE7X4Y/screenshot__433_.png)
