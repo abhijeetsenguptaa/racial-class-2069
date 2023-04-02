@@ -106,8 +106,8 @@ function signIn(){
   form.setAttribute('action', oauth2Endpoint);
  
   // Parameters to pass to OAuth 2.0 endpoint.
-  const params = {'client_id': '##yourclientid##',
-                'redirect_uri': '##yourredirecturi##',
+  const params = {'client_id': '1060693511365-5i17mhjpegn7nupgcajoffb4mkbbpisa.apps.googleusercontent.com',
+                'redirect_uri': 'http://127.0.0.1:5502/frontend/home.html',
                 'response_type': 'token',
                 'scope':'https://www.googleapis.com/auth/userinfo.profile',
                 'include_granted_scopes': 'true',
@@ -124,6 +124,6 @@ function signIn(){
  
 
   document.body.appendChild(form);
-  
+
   form.submit();
 }
