@@ -58,18 +58,29 @@ To run backend, run the following command
 
 ## Screenshots
 
-Signup Page:-
-<img src="C:\Users\rhythm\Downloads\Screenshot (431).png" alt="S>
+<h1>1.  Signup Page  </h1>
 
-Home Page:-
-![App Screenshot](https://nxm201workspace.slack.com/files/U04R4LXPP0W/F0523EE7X4Y/screenshot__433_.png)
+![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F0523EE43RN-91c5491d83/screenshot__431__720.png)
+     <hr>
 
-Game Board:-
-![App Screenshot](https://nxm201workspace.slack.com/files/U04R4LXPP0W/F0523EEA140/screenshot__434_.png)
+![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F051SCG4Q8H-e0ca506048/screenshot__432__720.png)
+     <hr>
 
-User:-
-![App Screenshot](https://nxm201workspace.slack.com/files/U04R4LXPP0W/F051DKW7X27/screenshot__435_.png)
 
+<h1>2.  Home Page  </h1>
+
+![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F0523EE7X4Y-9a1f8f1076/screenshot__433__720.png)
+     <hr>
+
+<h1>2.  Game Board  </h1>  
+
+![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F0523EEA140-e9f7a394fc/screenshot__434__720.png)
+     <hr>
+
+<h1>2.  Users  </h1> 
+
+![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F051DKW7X27-de271d5041/screenshot__435__720.png)
+     <hr>
 
 
 ## Feedback
