@@ -60,28 +60,25 @@ To run backend, run the following command
 
 <h1>1.  Signup Page  </h1>
 
-![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F0523EE43RN-91c5491d83/screenshot__431__720.png)
-     <hr>
+![Screenshot (431) (1)](https://user-images.githubusercontent.com/112754749/229349239-0c5caeff-8ff9-4369-848c-62a1035fa27f.png)
 
-![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F051SCG4Q8H-e0ca506048/screenshot__432__720.png)
-     <hr>
 
+![Screenshot (432)](https://user-images.githubusercontent.com/112754749/229349251-dc21d778-6a29-478a-9fcc-3cd10f84b6db.png)
 
 <h1>2.  Home Page  </h1>
 
-![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F0523EE7X4Y-9a1f8f1076/screenshot__433__720.png)
-     <hr>
+
+![Screenshot (433)](https://user-images.githubusercontent.com/112754749/229349268-3d995fb3-87f8-4122-93c4-ed4216a1269b.png)
 
 <h1>2.  Game Board  </h1>  
 
-![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F0523EEA140-e9f7a394fc/screenshot__434__720.png)
-     <hr>
+
+![Screenshot (434)](https://user-images.githubusercontent.com/112754749/229349287-09a0e865-cc63-4d9e-8f9b-fa14ac820cec.png)
+
 
 <h1>2.  Users  </h1> 
 
-![image](https://files.slack.com/files-tmb/T04QPUTU2FQ-F051DKW7X27-de271d5041/screenshot__435__720.png)
-     <hr>
-
+![Screenshot (435)](https://user-images.githubusercontent.com/112754749/229349296-d7bb74d3-280c-4939-8bf4-1ff88f11f4b5.png)
 
 ## Feedback
 
