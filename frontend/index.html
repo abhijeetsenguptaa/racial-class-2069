@@ -93,7 +93,7 @@
            </div>
            <button style="background-color: #ff7757;" id="loginBtn">Login</button>
        </form>
-         <h4>Not registered Yet? <a href="signup.html"> Create an account</a></h4>
+         <h4>Not registered Yet? <a href="index.html"> Create an account</a></h4>
     </div>
 
           
@@ -205,4 +205,30 @@ function login(){
         console.log(err);
      })
 }
+
+let  showbtan=document.querySelector('#login')
+
+ showbtan.addEventListener('click',()=>{
+    document.querySelector('.overlay').classList.add('showoverlay')
+      document.querySelector('.loginform').classList.add('showloginform')
+ })
+
+ let closeLogin=document.querySelector('.loginform>span')
+
+ closeLogin.addEventListener('click',()=>{
+  document.querySelector('.overlay').classList.add('closeoverlay')
+  document.querySelector('.loginform').classList.add('closeloginform')
+  
+  setTimeout(()=>{
+    
+    location.reload()
+    },1000)
+ })
+
+ let registerLoginbtn=document.querySelector('#form a')
+
+ registerLoginbtn.addEventListener('click',()=>{
+  document.querySelector('.overlay').classList.add('showoverlay')
+      document.querySelector('.loginform').classList.add('showloginform')
+ })
 </script>
