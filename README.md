@@ -12,4 +12,6 @@ Instructions:-
 To run this application we should have to install node_modules and different npm packages:
 we have to install express, nodemon, socket.io, bcrypt, jsonwebtoken, winston, winston-mongodb, mongoose, dotenv, cors etc.
 
+socket.io is used to connect client side to server side
+
 
