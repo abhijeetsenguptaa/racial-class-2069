@@ -10,6 +10,7 @@ let messageInput = document.getElementById('messageInput');
 let sendBtn = document.getElementById('sendBtn');
 
 
+socket.emit("userDetailsX",userDetail(name,room));
 
 socket.on("output", (msg) => {
   showIncomingMessage(`${msg.bot}`,`${msg.message}`,`${msg.time}`)
@@ -62,11 +63,9 @@ function messageFormat(name,message){
 }
 
 
-
 let logOutBtn = document.getElementById('logOutBtn');
 
 logOutBtn.addEventListener('click',()=>{
-  alert(`${name} successfully logged out!`)
   localStorage.setItem('token',null);
-  window.location = "./signup.html"
+  window.location = "./index.html"
 })
