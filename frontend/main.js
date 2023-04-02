@@ -10,7 +10,6 @@ let messageInput = document.getElementById('messageInput');
 let sendBtn = document.getElementById('sendBtn');
 
 
-socket.emit("userDetailsX",userDetail(name,room));
 
 socket.on("output", (msg) => {
   showIncomingMessage(`${msg.bot}`,`${msg.message}`,`${msg.time}`)
