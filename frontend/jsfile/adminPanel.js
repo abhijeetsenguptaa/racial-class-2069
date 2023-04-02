@@ -68,7 +68,7 @@ let logOutBtn = document.getElementById('logOutBtn');
 
 logOutBtn.addEventListener('click',()=>{
   localStorage.setItem('token',null);
-  window.location.href = "./signup.html"
+  window.location.href = "./index.html"
 })
 
 
