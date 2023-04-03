@@ -28,6 +28,7 @@ Install our-project with npm packages
   npm install express
   npm i mongoose
   npm i nodemon
+  npm i socket.io
   npm i bcrypt jsonwebtoken dotenv 
   npm i winston winston-mongodb
   
