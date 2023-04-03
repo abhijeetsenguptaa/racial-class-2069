@@ -85,7 +85,7 @@ To run backend, run the following command
 
 - [@abhijeetsenguptaa](https://www.github.com/abhijeetsenguptaa)
 - [@Anandkr21](https://www.github.com/Anandkr21)
-- [@shobhit0111](https://ww.github.com/shobhit0111)
+- [@shobhit0111](https://www.github.com/shobhit0111)
 
 
 ## Feedback
