@@ -1,6 +1,6 @@
 const registrationBtn = document.getElementById('registrationBtn');
 const loginBtn = document.getElementById('loginBtn');
-const url = "http://localhost:8080/"
+const url = "https://tic-tac-toe2.onrender.com/"
 
 registrationBtn.addEventListener('click',(e)=>{
     e.preventDefault();
