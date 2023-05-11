@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./cssfile/signup.css">
-    
-    <title>Live X's And O's</title>
-    <style></style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./cssfile/signup.css">
+
+  <title>Live X's And O's</title>
+  <style></style>
 </head>
+
 <body>
   <div id="navbar">
-    
+
     <div id="middle">
-      
-           <span
-              id="login"
-              style="
+
+      <span id="login" style="
                 display: inline-block;
                 line-height: 24px;
                 font-weight: 500;
@@ -24,104 +24,102 @@
                 position: relative;
                 font-size: 90%;
                 cursor: pointer;
-              "
-              ></span
-            >
-          </h4>
-        </div>
-      </div>
+              "></span>
+      </h4>
     </div>
-   
+  </div>
+  </div>
+
   </div>
 
 
 
   <!-- form cods start  from here -->
-    <div id="main-container">
-      <div id="container">
-         <div id="signup-logo">
-            <div>
-              <h3>Win Exciting Prizes</h3>
-            </div>
-            <div>
-              <h3>Invite Your Friends</h3>
-            </div>
-            <div>
-              <h3>Make New Friends</h3>
-            </div>
-         </div>
-         <div id="signup-from">
-            <form id="form">
-             <label>USER NAME</label><br>
-             <input   type="text" id="user_name" ><br>
-             <hr>
-             <label>EMAIL ADDRESS</label><br>
-             <input type="text" id="email"><br>
-             <hr>
-             <label>PASSWORD</label><br>
-             <input type="password" id="password"><br>
-             <hr>
-             <div id="massage"></div>
-              
-             <button id="registrationBtn">Register</button>
-             <h4>Already a member? <a>Log in</a></h4>
-             <button id="signupbtn">Signup with Google</button>
-             
-            </form>
-         </div>
+  <div id="main-container">
+    <div id="container">
+      <div id="signup-logo">
+        <div>
+          <h3>Win Exciting Prizes</h3>
+        </div>
+        <div>
+          <h3>Invite Your Friends</h3>
+        </div>
+        <div>
+          <h3>Make New Friends</h3>
+        </div>
       </div>
+      <div id="signup-from">
+        <form id="form">
+          <label>USER NAME</label><br>
+          <input type="text" id="user_name"><br>
+          <hr>
+          <label>EMAIL ADDRESS</label><br>
+          <input type="text" id="email"><br>
+          <hr>
+          <label>PASSWORD</label><br>
+          <input type="password" id="password"><br>
+          <hr>
+          <div id="massage"></div>
 
+          <button id="registrationBtn">Register</button>
+          <h4>Already a member? <a>Log in</a></h4>
+
+        </form>
+      </div>
     </div>
 
-   <!-- login start here -->
+  </div>
+
+  <!-- login start here -->
 
 
   <div class="overlay"></div>
-    <div class="loginform">
-      <!-- <img src="https://images.shopclues.com/images/ui/shopclues_logo@2x.png" width="150px" style="margin-bottom: 40px;" alt=""> -->
-       <span>&times</span>
-       <form  id="form_page" action="./home.html">
-           <div>
-               <label for="login_email">Email</label>
-               <input type="text" name="email" id="login_email">
-               <hr class="login-line">
-           </div> 
-           <div>
-               <label for="login_password">Password</label>
-               <input type="password"  name="password" id="login_password">
-               <hr class="login-line">
-           </div>
-           <button style="background-color: #ff7757;" id="loginBtn">Login</button>
-       </form>
-         <h4>Not registered Yet? <a href="index.html"> Create an account</a></h4>
-    </div>
-
-          
-           
+  <div class="loginform">
+    <!-- <img src="https://images.shopclues.com/images/ui/shopclues_logo@2x.png" width="150px" style="margin-bottom: 40px;" alt=""> -->
+    <span>&times</span>
+    <form id="form_page" action="./home.html">
+      <div>
+        <label for="login_email">Email</label>
+        <input type="text" name="email" id="login_email">
+        <hr class="login-line">
+      </div>
+      <div>
+        <label for="login_password">Password</label>
+        <input type="password" name="password" id="login_password">
+        <hr class="login-line">
+      </div>
+      <button style="background-color: #ff7757;" id="loginBtn">Login</button>
+    </form>
+    <h4>Not registered Yet? <a href="index.html"> Create an account</a></h4>
+  </div>
 
 
-    <!-- form ends here -->
 
-   
+
+
+  <!-- form ends here -->
+
+
 </body>
+
 </html>
 <!-- <script src="./jsfile/signup.js"></script> -->
 <script>
   const registrationBtn = document.getElementById('registrationBtn');
-const loginBtn = document.getElementById('loginBtn');
-const url = "http://localhost:8080/"
+  const loginBtn = document.getElementById('loginBtn');
+  const url = "http://localhost:8080/"
 
-registrationBtn.addEventListener('click',(e)=>{
+  registrationBtn.addEventListener('click', (e) => {
     e.preventDefault();
     registration()
-})
+  })
 
 
 
-loginBtn.addEventListener('click',(e)=>{
+  loginBtn.addEventListener('click', (e) => {
     e.preventDefault();
     login();
-})
+  })
 
 
 
@@ -132,103 +130,103 @@ loginBtn.addEventListener('click',(e)=>{
 
 
 
-// Registration work has been done here........................
-function registration(){
+  // Registration work has been done here........................
+  function registration() {
     let user_name = document.getElementById('user_name').value;
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
 
 
     let obj = {
-        name :user_name,
-        email : email,
-        password : password
+      name: user_name,
+      email: email,
+      password: password
     }
 
-    fetch(`${url}users/register`,{
-        method:"POST",
-        headers:{
-            "Content-type":"application/json"
-        },
-        body:JSON.stringify(obj)
+    fetch(`${url}users/register`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(obj)
     })
-     .then((res)=>{
+      .then((res) => {
         return res.json()
-     })
-     .then((data)=>{
+      })
+      .then((data) => {
         alert(data.msg)
-     })
-     .catch((err)=>{
+      })
+      .catch((err) => {
         console.log(err);
-     })
+      })
 
-}
-
-
+  }
 
 
-//Login Function starts here..................
-function login(){
+
+
+  //Login Function starts here..................
+  function login() {
     const login_email = document.getElementById('login_email').value;
     const login_password = document.getElementById('login_password').value;
 
     let obj = {
-        email : login_email,
-        password : login_password
+      email: login_email,
+      password: login_password
     }
 
 
-    fetch(`${url}users/login`,{
-        method : "POST",
-        headers : {
-            "Content-type" : "application/json"
-        },
-        body : JSON.stringify(obj)
+    fetch(`${url}users/login`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(obj)
     })
-     .then((res)=>{
+      .then((res) => {
         return res.json();
-     })
-     .then((data)=>{
-        if(data.msg == "Login Successful"){
-            localStorage.setItem('token',JSON.stringify(data.token));
-            localStorage.setItem('name',JSON.stringify(data.name));
-            if(data.role=="Player"){
-              window.location.href = "./home.html"
-            }else{
-              window.location.href = "./adminPanel.html"
-            }
-        }else{
-            alert(data.msg);
+      })
+      .then((data) => {
+        if (data.msg == "Login Successful") {
+          localStorage.setItem('token', JSON.stringify(data.token));
+          localStorage.setItem('name', JSON.stringify(data.name));
+          if (data.role == "Player") {
+            window.location.href = "./home.html"
+          } else {
+            window.location.href = "./adminPanel.html"
+          }
+        } else {
+          alert(data.msg);
         }
-     })
-     .catch((err)=>{
+      })
+      .catch((err) => {
         console.log(err);
-     })
-}
+      })
+  }
 
-let  showbtan=document.querySelector('#login')
+  let showbtan = document.querySelector('#login')
 
- showbtan.addEventListener('click',()=>{
+  showbtan.addEventListener('click', () => {
     document.querySelector('.overlay').classList.add('showoverlay')
-      document.querySelector('.loginform').classList.add('showloginform')
- })
+    document.querySelector('.loginform').classList.add('showloginform')
+  })
 
- let closeLogin=document.querySelector('.loginform>span')
+  let closeLogin = document.querySelector('.loginform>span')
 
- closeLogin.addEventListener('click',()=>{
-  document.querySelector('.overlay').classList.add('closeoverlay')
-  document.querySelector('.loginform').classList.add('closeloginform')
-  
-  setTimeout(()=>{
-    
-    location.reload()
-    },1000)
- })
+  closeLogin.addEventListener('click', () => {
+    document.querySelector('.overlay').classList.add('closeoverlay')
+    document.querySelector('.loginform').classList.add('closeloginform')
 
- let registerLoginbtn=document.querySelector('#form a')
+    setTimeout(() => {
 
- registerLoginbtn.addEventListener('click',()=>{
-  document.querySelector('.overlay').classList.add('showoverlay')
-      document.querySelector('.loginform').classList.add('showloginform')
- })
+      location.reload()
+    }, 1000)
+  })
+
+  let registerLoginbtn = document.querySelector('#form a')
+
+  registerLoginbtn.addEventListener('click', () => {
+    document.querySelector('.overlay').classList.add('showoverlay')
+    document.querySelector('.loginform').classList.add('showloginform')
+  })
 </script>

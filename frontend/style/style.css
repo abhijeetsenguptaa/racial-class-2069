@@ -7,17 +7,24 @@ body{
 }
 
 #mainContainer{
-    border: 2px solid black;
-    height: 100%;
+    /* border: 2px solid black; */
+    height: 580px;
     display: flex;
 }
 
 #left{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 40%;
     height: 100%;
     background-color: #111827;
     color: white;
+}
+
+.reset{
+    border: 2px solid rgb(250, 246, 246);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
 }
 
 #logOutBtn{
@@ -56,7 +63,7 @@ body{
 .player-detail{
     width: 75%;
     height: 100%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .player-1, .player-2{
@@ -69,7 +76,7 @@ body{
     width: 25%;
     height: 100%;
     text-align: center;
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
 }
 
 
@@ -155,11 +162,12 @@ body{
 }
 
 .messageBox{
-    border: 1px solid rgb(245, 241, 241);
+    /* border: 5px solid red; */
     color: white;
     margin: 2%;
-    padding: 0% 2%;
+    padding: 2% 2%;
     border-radius: 10px 10px;
+    
 }
 
 .mainMessage{
