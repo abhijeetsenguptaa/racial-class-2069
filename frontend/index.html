@@ -107,18 +107,18 @@
         <img src="./img/tw.png" alt="">
         <img src="./img/gp.png" alt="">
       </div>
-      <form class="input-group" id="login">
+      <form class="input-group" id="loginform">
         <input type="text" class="input-field" placeholder="Enter Name" required>
         <input type="password" class="input-field" placeholder="Password" required>
         <input type="checkbox" class="check-box"><span>Remember Password</span>
-        <button type="submit" class="submit-btn">Login</button>
+        <button type="submit" class="submit-btn" id="loginBtn">Login</button>
       </form>
-      <form class="input-group" id="register">
+      <form class="input-group" id="registerform">
         <input type="text" id="user_name" class="input-field" placeholder="Enter Name" required>
         <input type="email" id="email" class="input-field" placeholder="Enter Email" required>
         <input type="password" id="password" class="input-field" placeholder="Password" required>
         <input type="checkbox" class="check-box"><span>I agree terms & conditions.</span>
-        <button type="submit" class="submit-btn">Register</button>
+        <button type="submit" class="submit-btn" id="registrationBtn">Register</button>
       </form>
     </div>
   </div>
@@ -128,8 +128,8 @@
 
 
 <!-- <script>
-  let x = document.getElementById('login')
-  let y = document.getElementById('register')
+  let x = document.getElementById('loginform')
+  let y = document.getElementById('registerform')
   let z = document.getElementById('btn')
 
   function register() {
@@ -148,7 +148,9 @@
 
 <!-- <script src="./jsfile/signup.js"></script> -->
 
-<script>
+ <script>
+
+  
   const registrationBtn = document.getElementById('registrationBtn');
   const loginBtn = document.getElementById('loginBtn');
   const url = "http://localhost:8080/"
@@ -240,4 +242,6 @@
       })
   }
 
+
+ 
 </script>

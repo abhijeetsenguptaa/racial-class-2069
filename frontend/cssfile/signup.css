@@ -10,6 +10,7 @@
 
 #container {
   display: flex;
+  
 
 }
 
@@ -270,14 +271,19 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  margin-bottom: 400px;
+  height: 95%;
+  margin-top: -150px;
+  /* border: 3px solid red; */
+
 }
 
+h1{
+  margin: 20px 20px;
+}
 #background {
   background-image: url(/frontend/cssfile/2078959.webp);
   padding-top: 20px;
-  height: 100vh;
+  height: 595px;
   justify-content: center;
   background-position: center;
   background-size: cover;

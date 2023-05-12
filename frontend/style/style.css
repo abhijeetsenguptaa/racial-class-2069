@@ -7,15 +7,15 @@ body{
 }
 
 #mainContainer{
-    /* border: 2px solid black; */
-    height: 580px;
+    /* border: 2px solid red; */
+    height: 560px;
     display: flex;
 }
 
 #left{
-    /* border: 2px solid black; */
+    border: 2px solid red;
     width: 40%;
-    height: 100%;
+    height: 105%;
     background-color: #111827;
     color: white;
 }
@@ -42,15 +42,15 @@ body{
 .game-container {
     width: 100%;
     height: 100%;
-    /* border: 3px solid black; */
+    /* border: 3px solid red; */
 }
 
- .user-board {
+ /* .user-board {
     width: 100%;
     height: 220px;
-    /* border: 2px solid orange; */
+    border: 2px solid orange;
 
-}
+} */
 
 .user-container{
     width: 100%;
@@ -173,3 +173,4 @@ body{
 .mainMessage{
     margin-top: -2%;
 }
+
