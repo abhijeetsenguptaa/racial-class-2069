@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./cssfile/signup.css">
+  <link rel="stylesheet" href="./cssfile/index.css">
 
   <title>Live X's And O's</title>
   <style></style>
 </head>
 
-<body>
+<!-- <body>
   <div id="navbar">
 
     <div id="middle">
@@ -24,8 +24,9 @@
                 position: relative;
                 font-size: 90%;
                 cursor: pointer;
-              "></span>
-      </h4>
+              ">
+      </span>
+
     </div>
   </div>
   </div>
@@ -34,7 +35,6 @@
 
 
 
-  <!-- form cods start  from here -->
   <div id="main-container">
     <div id="container">
       <div id="signup-logo">
@@ -70,12 +70,10 @@
 
   </div>
 
-  <!-- login start here -->
 
 
   <div class="overlay"></div>
   <div class="loginform">
-    <!-- <img src="https://images.shopclues.com/images/ui/shopclues_logo@2x.png" width="150px" style="margin-bottom: 40px;" alt=""> -->
     <span>&times</span>
     <form id="form_page" action="./home.html">
       <div>
@@ -92,22 +90,70 @@
     </form>
     <h4>Not registered Yet? <a href="index.html"> Create an account</a></h4>
   </div>
+</body> -->
 
 
 
-
-
-  <!-- form ends here -->
-
-
+<body>
+  <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+      </div>
+      <div class="social-icons">
+        <img src="./img/fb.png" alt="">
+        <img src="./img/tw.png" alt="">
+        <img src="./img/gp.png" alt="">
+      </div>
+      <form class="input-group" id="loginform">
+        <input type="text" class="input-field" placeholder="Enter Name" required>
+        <input type="password" class="input-field" placeholder="Password" required>
+        <input type="checkbox" class="check-box"><span>Remember Password</span>
+        <button type="submit" class="submit-btn" id="loginBtn">Login</button>
+      </form>
+      <form class="input-group" id="registerform">
+        <input type="text" id="user_name" class="input-field" placeholder="Enter Name" required>
+        <input type="email" id="email" class="input-field" placeholder="Enter Email" required>
+        <input type="password" id="password" class="input-field" placeholder="Password" required>
+        <input type="checkbox" class="check-box"><span>I agree terms & conditions.</span>
+        <button type="submit" class="submit-btn" id="registrationBtn">Register</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
+
+
+<!-- <script>
+  let x = document.getElementById('loginform')
+  let y = document.getElementById('registerform')
+  let z = document.getElementById('btn')
+
+  function register() {
+    x.style.left = "-400px";
+    y.style.left = '50px';
+    z.style.left = '110px';
+  }
+
+  function login() {
+    x.style.left = "50px";
+    y.style.left = '450px';
+    z.style.left = '0';
+  }
+</script> -->
+
+
 <!-- <script src="./jsfile/signup.js"></script> -->
-<script>
+
+ <script>
+
+  
   const registrationBtn = document.getElementById('registrationBtn');
   const loginBtn = document.getElementById('loginBtn');
-  const url = "https://tic-tac-toe2.onrender.com/"
+  const url = "http://localhost:8080/"
 
   registrationBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -120,14 +166,6 @@
     e.preventDefault();
     login();
   })
-
-
-
-
-
-
-
-
 
 
   // Registration work has been done here........................
@@ -204,29 +242,6 @@
       })
   }
 
-  let showbtan = document.querySelector('#login')
 
-  showbtan.addEventListener('click', () => {
-    document.querySelector('.overlay').classList.add('showoverlay')
-    document.querySelector('.loginform').classList.add('showloginform')
-  })
-
-  let closeLogin = document.querySelector('.loginform>span')
-
-  closeLogin.addEventListener('click', () => {
-    document.querySelector('.overlay').classList.add('closeoverlay')
-    document.querySelector('.loginform').classList.add('closeloginform')
-
-    setTimeout(() => {
-
-      location.reload()
-    }, 1000)
-  })
-
-  let registerLoginbtn = document.querySelector('#form a')
-
-  registerLoginbtn.addEventListener('click', () => {
-    document.querySelector('.overlay').classList.add('showoverlay')
-    document.querySelector('.loginform').classList.add('showloginform')
-  })
+ 
 </script>
