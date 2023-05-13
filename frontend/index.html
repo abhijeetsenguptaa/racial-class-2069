@@ -1,114 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In</title>
-    <link rel="stylesheet" href="./cssfile/signup.css" />
-  </head>
-  <body>
-    <div id="loginBox">
-      <div>
-        <button class="toogle-btn">Login</button>
-        <button class="toogle-btn">Sign Up</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="./cssfile/index.css" />
+</head>
+
+<body>
+  <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+        <button type="button" class="toggle-btn" onclick="register()">Register</button>
       </div>
-      <div id="loginForm">
-        <input
-          type="email"
-          id="login-email"
-          placeholder="Enter your Email"
-        /><br />
-        <input
-          type="password"
-          id="login-password"
-          placeholder="Enter your Password"
-        /><br />
-        <input type="submit" value="Login" id="login-btn" />
+
+      <div class="social-icons">
+        <img src="./img/fb.png" alt="">
+        <img src="./img/tw.png" alt="">
+        <img src="./img/gp.png" alt="">
       </div>
-      <div id="registerForm">
-        <input type="text" id="register-name" placeholder="Enter your Name"><br>
-        <input
-          type="email"
-          id="register-email"
-          placeholder="Enter your Email"
-        /><br />
-        <input
-          type="password"
-          id="register-password"
-          placeholder="Enter your Password"
-        /><br />
-        <input type="submit" value="Register" id="register-btn" />
+
+      <div class="input-group" id="login">
+        <input type="email" class="input-field" id="login-email" placeholder="Enter your Email"  required/>
+        <input type="password" class="input-field" id="login-password" placeholder="Enter your Password" required/>
+        <input type="submit" value="Login" id="loginbtn" />
       </div>
+
+      <div class="input-group" id="register">
+        <input type="text" class="input-field" id="register-name" placeholder="Enter your Name"required/>
+        <input type="email" class="input-field" id="register-email" placeholder="Enter your Email" required/>
+        <input type="password" class="input-field" id="register-password" placeholder="Enter your Password" required/>
+        <input type="submit" value="Register" id="registerbtn" />
+      </div>
+
     </div>
-  </body>
-  <script>
-    let loginBtn = document.getElementById("login-btn");
-    let registerBtn = document.getElementById("register-btn");
+  </div>
+
+</body>
 
 
-    // login 
-    loginBtn.addEventListener("click", () => {
-      let loginEmail = document.getElementById("login-email").value;
-      let loginPassword = document.getElementById("login-password").value;
-      let obj = {
-        email : loginEmail,
-        password : loginPassword
-      }
+<script>
 
-      fetch('http://localhost:8080/users/login',{
-        method : "POST",
-        headers : {
-          "Content-type":"application/json"
-        },
-        body : JSON.stringify(obj)
-      })
-      .then((res)=>{
+let x = document.getElementById('login')
+    let y = document.getElementById('register')
+    let z = document.getElementById('btn')
+
+    function register() {
+        x.style.left = "-400px";
+        y.style.left = '50px';
+        z.style.left = '110px';
+    }
+
+    function login() {
+        x.style.left = "50px";
+        y.style.left = '450px';
+        z.style.left = '0';
+    }
+
+
+  let loginBtn = document.getElementById("loginbtn");
+  let registerBtn = document.getElementById("registerbtn");
+
+
+  // login 
+  loginBtn.addEventListener("click", () => {
+    let loginEmail = document.getElementById("login-email").value;
+    let loginPassword = document.getElementById("login-password").value;
+    let obj = {
+      email: loginEmail,
+      password: loginPassword
+    }
+    // console.log(obj, "hello");
+
+    fetch('http://localhost:8080/users/login', {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(obj)
+    })
+      .then((res) => {
         return res.json()
       })
-      .then((data)=>{
-        if(data.msg == "Login Successful"){
+      .then((data) => {
+        if (data.msg == "Login Successful") {
           localStorage.setItem('token', data.token)
-          if(data.role=="Admin"){
+          if (data.role == "Admin") {
             window.location.href = "./adminPanel.html"
-          }else{
+          } else {
             window.location.href = "./home.html"
           }
-        }else{
+        } else {
           alert(data.msg)
         }
       })
-    });
-    // login
+  });
+  // login
 
 
-    // register
-    registerBtn.addEventListener("click",()=>{
-      let registerName = document.getElementById('register-name').value;
-      let registerEmail = document.getElementById('register-email').value;
-      let registerPassword = document.getElementById('register-password').value;
+  // register
+  registerBtn.addEventListener("click", () => {
+    let registerName = document.getElementById('register-name').value;
+    let registerEmail = document.getElementById('register-email').value;
+    let registerPassword = document.getElementById('register-password').value;
 
 
-      let obj = {
-        name : registerName,
-        email : registerEmail,
-        password : registerPassword
-      }
+    let obj = {
+      name: registerName,
+      email: registerEmail,
+      password: registerPassword
+    }
 
-      fetch('http://localhost:8080/users/register',{
-        method : "POST",
-        headers : {
-          "Content-type":"application/json"
-        },
-        body : JSON.stringify(obj)
-      })
-      .then((res)=>{
+    fetch('http://localhost:8080/users/register', {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(obj)
+    })
+      .then((res) => {
         return res.json()
       })
-      .then((data)=>{
+      .then((data) => {
         alert(data.msg);
       })
-    })
+  })
     // register
-  </script>
+</script>
+
 </html>
