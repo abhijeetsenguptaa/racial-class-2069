@@ -5,7 +5,7 @@ let turn = ''
 let board = []
 
 // Connecting from Server
-// var socket = io('http://localhost:8080/',
+// var socket = io('https://tic-tac-toe-mjsu.onrender.com/',
 //     {
 //         transports: ['websocket'],
 //     }
