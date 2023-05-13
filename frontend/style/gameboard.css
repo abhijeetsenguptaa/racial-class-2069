@@ -1,33 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 4px;
 }
-body{
+
+body {
     background-color: #111827;
 }
 
-#mainContainer{
-    /* border: 2px solid red; */
-    height: 560px;
+#mainContainer {
+    /* border: 2px solid green; */
+    height: 600px;
     display: flex;
+
 }
 
-#left{
-    border: 2px solid red;
+#left {
+    /* border: 2px solid red; */
     width: 40%;
-    height: 105%;
+    height: 100%;
     background-color: #111827;
     color: white;
 }
 
-.reset{
-    border: 2px solid rgb(250, 246, 246);
+.reset {
+    /* border: 2px solid rgb(250, 246, 246); */
     border-radius: 10px;
     color: white;
     cursor: pointer;
 }
 
-#logOutBtn{
+#logOutBtn {
     border: 2px solid rgb(250, 246, 246);
     border-radius: 10px;
     color: white;
@@ -35,44 +37,8 @@ body{
     /* width: 11%; */
 }
 
-/* #logOutBtn:hover{
 
-} */
-
-.game-container {
-    width: 100%;
-    height: 100%;
-    /* border: 3px solid red; */
-}
-
- /* .user-board {
-    width: 100%;
-    height: 220px;
-    border: 2px solid orange;
-
-} */
-
-.user-container{
-    width: 100%;
-    height: 70%;
-    display: flex;
-    /* border: 3px solid green; */
-}
-
-
-.player-detail{
-    width: 75%;
-    height: 100%;
-    /* border: 2px solid black; */
-}
-
-.player-1, .player-2{
-    display: flex;
-    margin-top: 10px;
-    justify-content: space-around;
-}
-
-.logout-section{
+.logout-section {
     width: 25%;
     height: 100%;
     text-align: center;
@@ -80,32 +46,21 @@ body{
 }
 
 
-.message{
-    width: 100%;
-    height: 70px;
-    /* border: 3px solid brown; */
-} 
 
-
- #message{
+#message {
     color: white;
     font-family: sans-serif;
     margin-top: 20px;
     font-size: 18px;
     text-align: center;
-} 
+    /* border: 3px solid brown;  */
+}
 
- .game-board {
+.game-board {
     width: 99%;
-    height: 340px;
+    height: 100%;
     /* border: 1px solid blue; */
 }
-
-#block {
-    height: 100%;
-}
-
-
 
 
 .gridbox {
@@ -116,16 +71,16 @@ body{
     /* border: 4px solid red; */
 }
 
-#board{
+#board {
     width: 100%;
     height: 100%;
     gap: 5px;
-}  
+}
 
 
 
 
-#right{
+#right {
     /* border: 4px solid black; */
     width: 60%;
     height: 100%;
@@ -135,53 +90,90 @@ body{
     background-size: cover;
 }
 
-#displayMessage{
-    /* border: 1px solid black; */
+#displayMessage {
     overflow-y: auto;
-    height: 87.8vh;
+    height: 540px;
+   
 }
 
-#inputField{
-    border: 1px solid black;    
+#inputField {
+    border: 1px solid black;
+
 }
 
-#messageInput{
+#messageInput {
     width: 88%;
+    /* border: 2px solid orange; */
+
 }
 
-#sendBtn{
-    border: 2px solid rgb(250, 246, 246);
-    border-radius: 10px;
+#sendBtn {
+    /* border: 2px solid rgb(250, 246, 246); */
+    border-radius: 2px;
     color: white;
     width: 11%;
+    /* border: 2px solid red; */
+
 }
 
-.identity{
+.identity {
     display: flex;
     justify-content: space-between;
+
 }
 
-.messageBox{
+.messageBox {
     /* border: 5px solid red; */
     color: white;
     margin: 2%;
     padding: 2% 2%;
     border-radius: 10px 10px;
-    
+
+
 }
 
-.mainMessage{
+.mainMessage {
     margin-top: -2%;
 }
 
-@media (min-width: 400px) and (max-width: 800px){
+@media (min-width:501px) and (max-width:1200px) {
     #mainContainer{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        /* border: 9px solid white; */
     }
-
-    #left,#right{
+    #left{
         width: 100%;
-        height: 75vh;
+        height: 750px;
+        /* border: 2px solid white; */
     }
+    #right{
+        margin-top: 55px;
+        width: 100%;
+        height: 550px;
+        /* border: 4px solid red; */
+    }
+    /* #displayMessage{
+       border: 4px solid blue;
+    } */
+    
+}
 
+@media (min-width: 0px) and (max-width: 500px) {
+    #mainContainer{
+        display: flex;
+        flex-direction: column;
+        /* border: 9px solid white; */
+        align-items: center;
+
+    }
+    #left{
+        width: 100%;
+        height: 750px;
+        /* border: 2px solid white; */
+    }
+    #right{
+        display: none;
+    }
+  
 }
