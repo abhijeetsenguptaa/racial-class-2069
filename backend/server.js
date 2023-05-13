@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const moment = require('moment')
+require('moment-timezone');
 // const server = require('http').createServer(app);
 // const io = require('socket.io')(server);
 const { connection } = require('./configs/connection');
@@ -30,25 +31,28 @@ io.on("connection", (socket) => {
 
 
     //Abhijeet is working from here--------------------------------------------- 
-    socket.emit('joinedGame',userJoin("Live X's And O's","Welcome to the Game"))
+    socket.emit('joinedGame', userJoin("Live X's And O's", "Welcome to the Game"))
 
 
 
-    function userJoin(bot,message){
+    function userJoin(bot, message) {
+        const currentTimezone = moment.tz.guess();
+        const currentTime = moment().tz(currentTimezone);
+        const formattedTime = currentTime.format('HH:mm a');
         return {
             bot,
-            time : moment().format('h:mm a'),
+            time: formattedTime,
             message
         }
     }
 
-    socket.on("userDetailsX",(data)=>{
-        socket.on("message",(mesg)=>{
-            io.emit("output",userJoin(`${data.name}`,mesg.message))
+    socket.on("userDetailsX", (data) => {
+        socket.on("message", (mesg) => {
+            io.emit("output", userJoin(`${data.name}`, mesg.message))
         })
     })
 
-    
+
     //Abhijeet is working from here--------------------------------------------
 
     if (users.length === 2) {
