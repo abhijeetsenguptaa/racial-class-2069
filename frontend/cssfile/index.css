@@ -1,49 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    
 }
 
-.hero{
+.hero {
     height: 100%;
     width: 100%;
-    background-image:url(./game.webp);
+    background-image: url(../img/tic\ tac\ toe.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
-    margin-top: -18px;
 }
 
 
-.form-box{
+.form-box {
     width: 380px;
     height: 480px;
     position: relative;
     margin: 6% auto;
-    background: rgb(240, 234, 234);
     padding: 5px;
     overflow: hidden;
+    border: 1px solid white;
 }
 
-.button-box{
+.button-box {
     width: 220px;
-    margin:  35px auto;
+    margin: 35px auto;
     position: relative;
     box-shadow: 0 0 20px 9px #ff61241f;
     border-radius: 30px;
+   border: 1px solid white;
 }
 
-.toggle-btn{
+.toggle-btn {
     padding: 10px 30px;
     cursor: pointer;
     background: transparent;
     border: 0;
     outline: none;
     position: relative;
+    color: white;
 }
 
-#btn{
+#btn {
     top: 0;
     left: 0;
     position: absolute;
@@ -54,12 +54,12 @@
     transform: .5s;
 }
 
-.social-icons{
+.social-icons {
     margin: 30px auto;
     text-align: center;
 }
 
-.social-icons img{
+.social-icons img {
     width: 30px;
     margin: 0 12px;
     box-shadow: 0 0 20px 0 #7f7f7f3d;
@@ -67,53 +67,66 @@
     border-radius: 50%;
 }
 
-.input-group{
+.input-group {
     top: 180px;
     position: absolute;
     width: 280px;
     transition: .5s;
 }
 
-.input-field{
+.input-field {
     width: 100%;
     padding: 10px 0;
     margin: 5px 0;
     border-left: 0;
     border-top: 0;
     border-right: 0;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #ffffff;
     outline: none;
     background: transparent;
 }
 
-.submit-btn{
-    width: 85%;
-    padding:  10px 30px;
+input[type=email], input[type=password], input[type=text]{
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+::placeholder{
+    color: white;
+}
+#registerbtn, #loginbtn {
+    width: 100%;
+    padding: 10px 30px;
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: linear-gradient(to right, hwb(340 0% 1% / 0.992), #ffad06);
     border: 0;
     outline: linen;
     border-radius: 30px;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
 }
 
-.check-box{
-    margin: 30px 10px 30px 0;
+.check-box {
+    display: flex;
+    margin: 50px 10px 30px 0;
 }
 
 
-span{
+span {
     color: #777;
     font-size: 12px;
     bottom: 68px;
     position: absolute;
 }
 
-#login{
+#login {
     left: 50px;
 }
 
-#register{
+#register {
     left: 450px;
 }
