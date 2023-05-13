@@ -20,7 +20,7 @@
           placeholder="Enter your Email"
         /><br />
         <input
-          type="email"
+          type="password"
           id="login-password"
           placeholder="Enter your Password"
         /><br />
@@ -34,7 +34,7 @@
           placeholder="Enter your Email"
         /><br />
         <input
-          type="email"
+          type="password"
           id="register-password"
           placeholder="Enter your Password"
         /><br />
@@ -68,6 +68,7 @@
       })
       .then((data)=>{
         if(data.msg == "Login Successful"){
+          localStorage.setItem('token', data.token)
           if(data.role=="Admin"){
             window.location.href = "./adminPanel.html"
           }else{

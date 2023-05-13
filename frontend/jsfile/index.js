@@ -57,9 +57,9 @@ socket.on('move', (data) => {
 // Winner 
 socket.on('winner', (data) => {
     document.getElementById('message').innerHTML = `Winner is ${data}`
-    setTimeout(() => {
-        window.location.reload()
-    }, 5000);
+    // setTimeout(() => {
+    //     window.location.reload()
+    // }, 5000);
 })
 
 // Disconnection msg, when user is left.
