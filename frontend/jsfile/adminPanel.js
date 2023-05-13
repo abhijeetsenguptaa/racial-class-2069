@@ -4,7 +4,7 @@ fetch("http://localhost:8080/users/", {
   method: "GET",
   headers: {
     "Content-type": "application/json",
-    Authorization: JSON.parse(localStorage.getItem("token")),
+    Authorization: localStorage.getItem("token"),
   },
 })
   .then((res) => {
