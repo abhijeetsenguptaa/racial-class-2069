@@ -60,10 +60,14 @@ To run backend, run the following command
 ## Screenshots
 
 <h1>1.  Signup Page  </h1>
+
 ![Screenshot (526)](https://github.com/abhijeetsenguptaa/racial-class-2069/assets/101327881/f279dd0a-5305-4a5a-bf1a-f1f3c2976576)
 
+
 <h1>2.  Home Page  </h1>
+
 ![Screenshot (525)](https://github.com/abhijeetsenguptaa/racial-class-2069/assets/101327881/fc219e66-fe44-46ca-8a80-0814c82d1f72)
+
 
 <h1>3.  Game Board  </h1>  
 
