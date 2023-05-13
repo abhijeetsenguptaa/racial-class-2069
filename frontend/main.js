@@ -1,4 +1,4 @@
-const socket = io("http://localhost:8080/", { transports: ["websocket"] });
+const socket = io("https://tic-tac-toe-mjsu.onrender.com/", { transports: ["websocket"] });
 let userDetails = new URLSearchParams(window.location.search);
 
 const name = userDetails.get("username")

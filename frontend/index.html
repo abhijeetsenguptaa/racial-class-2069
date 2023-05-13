@@ -76,7 +76,7 @@ let x = document.getElementById('login')
     }
     // console.log(obj, "hello");
 
-    fetch('http://localhost:8080/users/login', {
+    fetch('https://tic-tac-toe-mjsu.onrender.com/users/login', {
       method: "POST",
       headers: {
         "Content-type": "application/json"
@@ -115,7 +115,7 @@ let x = document.getElementById('login')
       password: registerPassword
     }
 
-    fetch('http://localhost:8080/users/register', {
+    fetch('https://tic-tac-toe-mjsu.onrender.com/users/register', {
       method: "POST",
       headers: {
         "Content-type": "application/json"

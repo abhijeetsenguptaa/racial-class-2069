@@ -1,6 +1,6 @@
 const mainContent = document.getElementById("mainContent");
 
-fetch("http://localhost:8080/users/", {
+fetch("https://tic-tac-toe-mjsu.onrender.com/users/", {
   method: "GET",
   headers: {
     "Content-type": "application/json",
@@ -39,7 +39,7 @@ function renderCards(data) {
     profileDelete.innerText = "DELETE";
 
     profileDelete.addEventListener("click", () => {
-      fetch(`http://localhost:8080/users/remove/${element._id}`, {
+      fetch(`https://tic-tac-toe-mjsu.onrender.com/users/remove/${element._id}`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json",
