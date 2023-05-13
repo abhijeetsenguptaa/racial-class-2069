@@ -1,247 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./cssfile/index.css">
-
-  <title>Live X's And O's</title>
-  <style></style>
-</head>
-
-<!-- <body>
-  <div id="navbar">
-
-    <div id="middle">
-
-      <span id="login" style="
-                display: inline-block;
-                line-height: 24px;
-                font-weight: 500;
-                color: #212121;
-                position: relative;
-                font-size: 90%;
-                cursor: pointer;
-              ">
-      </span>
-
-    </div>
-  </div>
-  </div>
-
-  </div>
-
-
-
-  <div id="main-container">
-    <div id="container">
-      <div id="signup-logo">
-        <div>
-          <h3>Win Exciting Prizes</h3>
-        </div>
-        <div>
-          <h3>Invite Your Friends</h3>
-        </div>
-        <div>
-          <h3>Make New Friends</h3>
-        </div>
-      </div>
-      <div id="signup-from">
-        <form id="form">
-          <label>USER NAME</label><br>
-          <input type="text" id="user_name"><br>
-          <hr>
-          <label>EMAIL ADDRESS</label><br>
-          <input type="text" id="email"><br>
-          <hr>
-          <label>PASSWORD</label><br>
-          <input type="password" id="password"><br>
-          <hr>
-          <div id="massage"></div>
-
-          <button id="registrationBtn">Register</button>
-          <h4>Already a member? <a>Log in</a></h4>
-
-        </form>
-      </div>
-    </div>
-
-  </div>
-
-
-
-  <div class="overlay"></div>
-  <div class="loginform">
-    <span>&times</span>
-    <form id="form_page" action="./home.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="./cssfile/signup.css" />
+  </head>
+  <body>
+    <div id="loginBox">
       <div>
-        <label for="login_email">Email</label>
-        <input type="text" name="email" id="login_email">
-        <hr class="login-line">
+        <button class="toogle-btn">Login</button>
+        <button class="toogle-btn">Sign Up</button>
       </div>
-      <div>
-        <label for="login_password">Password</label>
-        <input type="password" name="password" id="login_password">
-        <hr class="login-line">
+      <div id="loginForm">
+        <input
+          type="email"
+          id="login-email"
+          placeholder="Enter your Email"
+        /><br />
+        <input
+          type="email"
+          id="login-password"
+          placeholder="Enter your Password"
+        /><br />
+        <input type="submit" value="Login" id="login-btn" />
       </div>
-      <button style="background-color: #ff7757;" id="loginBtn">Login</button>
-    </form>
-    <h4>Not registered Yet? <a href="index.html"> Create an account</a></h4>
-  </div>
-</body> -->
-
-
-
-<body>
-  <div class="hero">
-    <div class="form-box">
-      <div class="button-box">
-        <div id="btn"></div>
-        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
-        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+      <div id="registerForm">
+        <input type="text" id="register-name" placeholder="Enter your Name"><br>
+        <input
+          type="email"
+          id="register-email"
+          placeholder="Enter your Email"
+        /><br />
+        <input
+          type="email"
+          id="register-password"
+          placeholder="Enter your Password"
+        /><br />
+        <input type="submit" value="Register" id="register-btn" />
       </div>
-      <div class="social-icons">
-        <img src="./img/fb.png" alt="">
-        <img src="./img/tw.png" alt="">
-        <img src="./img/gp.png" alt="">
-      </div>
-      <form class="input-group" id="loginform">
-        <input type="text" class="input-field" placeholder="Enter Name" required>
-        <input type="password" class="input-field" placeholder="Password" required>
-        <input type="checkbox" class="check-box"><span>Remember Password</span>
-        <button type="submit" class="submit-btn" id="loginBtn">Login</button>
-      </form>
-      <form class="input-group" id="registerform">
-        <input type="text" id="user_name" class="input-field" placeholder="Enter Name" required>
-        <input type="email" id="email" class="input-field" placeholder="Enter Email" required>
-        <input type="password" id="password" class="input-field" placeholder="Password" required>
-        <input type="checkbox" class="check-box"><span>I agree terms & conditions.</span>
-        <button type="submit" class="submit-btn" id="registrationBtn">Register</button>
-      </form>
     </div>
-  </div>
-</body>
-
-</html>
-
-
-<!-- <script>
-  let x = document.getElementById('loginform')
-  let y = document.getElementById('registerform')
-  let z = document.getElementById('btn')
-
-  function register() {
-    x.style.left = "-400px";
-    y.style.left = '50px';
-    z.style.left = '110px';
-  }
-
-  function login() {
-    x.style.left = "50px";
-    y.style.left = '450px';
-    z.style.left = '0';
-  }
-</script> -->
+  </body>
+  <script>
+    let loginBtn = document.getElementById("login-btn");
+    let registerBtn = document.getElementById("register-btn");
 
 
-<!-- <script src="./jsfile/signup.js"></script> -->
+    // login 
+    loginBtn.addEventListener("click", () => {
+      let loginEmail = document.getElementById("login-email").value;
+      let loginPassword = document.getElementById("login-password").value;
+      let obj = {
+        email : loginEmail,
+        password : loginPassword
+      }
 
- <script>
-
-  
-  const registrationBtn = document.getElementById('registrationBtn');
-  const loginBtn = document.getElementById('loginBtn');
-  const url = "http://localhost:8080/"
-
-  registrationBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    registration()
-  })
-
-
-
-  loginBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    login();
-  })
-
-
-  // Registration work has been done here........................
-  function registration() {
-    let user_name = document.getElementById('user_name').value;
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-
-
-    let obj = {
-      name: user_name,
-      email: email,
-      password: password
-    }
-
-    fetch(`${url}users/register`, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json"
-      },
-      body: JSON.stringify(obj)
-    })
-      .then((res) => {
+      fetch('http://localhost:8080/users/login',{
+        method : "POST",
+        headers : {
+          "Content-type":"application/json"
+        },
+        body : JSON.stringify(obj)
+      })
+      .then((res)=>{
         return res.json()
       })
-      .then((data) => {
-        alert(data.msg)
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-
-  }
-
-
-
-
-  //Login Function starts here..................
-  function login() {
-    const login_email = document.getElementById('login_email').value;
-    const login_password = document.getElementById('login_password').value;
-
-    let obj = {
-      email: login_email,
-      password: login_password
-    }
-
-
-    fetch(`${url}users/login`, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json"
-      },
-      body: JSON.stringify(obj)
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        if (data.msg == "Login Successful") {
-          localStorage.setItem('token', JSON.stringify(data.token));
-          localStorage.setItem('name', JSON.stringify(data.name));
-          if (data.role == "Player") {
-            window.location.href = "./home.html"
-          } else {
+      .then((data)=>{
+        if(data.msg == "Login Successful"){
+          if(data.role=="Admin"){
             window.location.href = "./adminPanel.html"
+          }else{
+            window.location.href = "./home.html"
           }
-        } else {
-          alert(data.msg);
+        }else{
+          alert(data.msg)
         }
       })
-      .catch((err) => {
-        console.log(err);
+    });
+    // login
+
+
+    // register
+    registerBtn.addEventListener("click",()=>{
+      let registerName = document.getElementById('register-name').value;
+      let registerEmail = document.getElementById('register-email').value;
+      let registerPassword = document.getElementById('register-password').value;
+
+
+      let obj = {
+        name : registerName,
+        email : registerEmail,
+        password : registerPassword
+      }
+
+      fetch('http://localhost:8080/users/register',{
+        method : "POST",
+        headers : {
+          "Content-type":"application/json"
+        },
+        body : JSON.stringify(obj)
       })
-  }
-
-
- 
-</script>
+      .then((res)=>{
+        return res.json()
+      })
+      .then((data)=>{
+        alert(data.msg);
+      })
+    })
+    // register
+  </script>
+</html>

@@ -174,3 +174,14 @@ body{
     margin-top: -2%;
 }
 
+@media (min-width: 00px) and (max-width: 800px){
+    #mainContainer{
+        display: block;
+    }
+
+    #left,#right{
+        width: 100%;
+        height: 75vh;
+    }
+
+}
