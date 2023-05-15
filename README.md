@@ -71,7 +71,7 @@ To run backend, run the following command
 
 <h1>3.  Game Board  </h1>  
 
-![Screenshot (524)](https://github.com/abhijeetsenguptaa/racial-class-2069/assets/101327881/618044fc-0d61-4595-8201-1062b2a272a6)
+![2023-05-16T00_20_43](https://github.com/abhijeetsenguptaa/racial-class-2069/assets/113422735/2658047b-06e2-458c-b2e1-33d944377f48)
 
 
 <h1>4.  Users  </h1> 
